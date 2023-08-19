@@ -2,8 +2,8 @@
 -export([len/1]).
 
 % Порахувати кількість елементів списку
-len(L) when is_list(L) ->
-    len_(L, 0).
+len(List) when is_list(List) ->
+    len_(List, 0).
 
 len_([], Acc) ->
     Acc;

@@ -1,6 +1,6 @@
 hidden = ["**/*.beam"]
 
-run = ["make", "--debug"]
+run = ["make"]
 
 [nix]
 channel = "stable-22_11"

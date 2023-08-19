@@ -3,9 +3,9 @@
 
 % Перевернути список
 reverse(List) when is_list(List) ->
-    reverse_(List, []).
+    reverse(List, []).
 
-reverse_([], Reversed) ->
+reverse([], Reversed) ->
     Reversed;
-reverse_([H | T], Reversed) ->
-    reverse_(T, [H | Reversed]).
+reverse([H | T], Reversed) ->
+    reverse(T, [H | Reversed]).

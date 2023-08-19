@@ -6,8 +6,8 @@
 last_test_() ->
     [
         {
-            "it should return atom 'false' for an empty list",
-            ?_assertEqual(false, last([]))
+            "it should return atom 'undefined' for an empty list",
+            ?_assertEqual(undefined, last([]))
         },
         {
             "it should return last element for the one-element list",

@@ -3,9 +3,9 @@
 
 % Знайти два останніх елементи списку
 but_last([]) ->
-    false;
+    undefined;
 but_last([_]) ->
-    false;
+    undefined;
 but_last([X, Y]) ->
     {X, Y};
 but_last([_ | T]) ->

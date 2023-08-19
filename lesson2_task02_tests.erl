@@ -6,12 +6,12 @@
 but_last_test_() ->
     [
         {
-            "it should return atom 'false' for an empty list",
-            ?_assertEqual(false, but_last([]))
+            "it should return atom 'undefined' for an empty list",
+            ?_assertEqual(undefined, but_last([]))
         },
         {
-            "it should return atom 'false' for the one-element list",
-            ?_assertEqual(false, but_last([a]))
+            "it should return atom 'undefined' for the one-element list",
+            ?_assertEqual(undefined, but_last([a]))
         },
         {
             "it should return 2 last elements for the two-element list",

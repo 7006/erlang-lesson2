@@ -3,7 +3,7 @@
 
 % Знайти останній елемент списку
 last([]) ->
-    false;
+    undefined;
 last([H]) ->
     H;
 last([_ | T]) ->

@@ -10,6 +10,7 @@ element_at_test_() ->
             [
                 ?_assertEqual(d, element_at([a, b, c, d, e, f], 4)),
                 ?_assertEqual(e, element_at([a, b, c, d, e, f], 5)),
+                ?_assertEqual(f, element_at([a, b, c, d, e, f], 6)),
                 ?_assertEqual(a, element_at([a, b, c, d, e, f], 1))
             ]
         },

@@ -6,6 +6,31 @@
 element_at_test_() ->
     [
         {
+            "it should reject a non integer value for the 'Index' argument",
+            [
+                ?_assertError(function_clause, element_at([a], first)),
+                ?_assertError(function_clause, element_at([], first))
+            ]
+        },
+        {
+            "it should reject a negative integer value for the 'Index' argument",
+            [
+                ?_assertError(function_clause, element_at([a], -1)),
+                ?_assertError(function_clause, element_at([], -1))
+            ]
+        },
+        {
+            "it should reject 0 for the 'Index' argument",
+            [
+                ?_assertError(function_clause, element_at([a], 0)),
+                ?_assertError(function_clause, element_at([], 0))
+            ]
+        },
+        {
+            "it should return the 1st element for the one-element list",
+            ?_assertEqual(a, element_at([a], 1))
+        },
+        {
             "it should get the element at the given index",
             [
                 ?_assertEqual(d, element_at([a, b, c, d, e, f], 4)),

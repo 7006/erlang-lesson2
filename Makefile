@@ -1,3 +1,5 @@
+export EUNIT=verbose
+
 .PHONY: all
 all: fmt test
 
@@ -15,15 +17,15 @@ compile: clean
 
 .PHONY: lesson2_task01_tests
 lesson2_task01_tests: compile
-	erl -noshell -eval "eunit:test(lesson2_task01_tests, [])" -s init stop
+	erl -noshell -run lesson2_task01_tests test -run init stop
 
 .PHONY: lesson2_task02_tests
 lesson2_task02_tests: compile
-	erl -noshell -eval "eunit:test(lesson2_task02_tests, [])" -s init stop
+	erl -noshell -run lesson2_task02_tests test -run init stop
 
 .PHONY: lesson2_taskXXX_tests
 lesson2_taskXXX_tests: compile
-	erl -noshell -eval "eunit:test(lesson2_taskXXX_tests, [])" -s init stop
+	erl -noshell -run lesson2_taskXXX_tests test -run init stop
 
 .PHONY: test
 test: lesson2_task01_tests lesson2_task02_tests lesson2_taskXXX_tests

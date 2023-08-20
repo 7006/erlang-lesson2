@@ -6,7 +6,31 @@
 encode_test_() ->
     [
         {
-            "it should return atom 'ok'",
-            ?_assertEqual(ok, encode([]))
+            "it should encode non-empty list",
+            [
+                ?_assertEqual(
+                    [{4, a}, {1, b}, {2, c}, {2, a}, {1, d}, {4, e}],
+                    encode([a, a, a, a, b, c, c, a, a, d, e, e, e, e])
+                ),
+                ?_assertEqual(
+                    [{1, a}, {1, b}, {1, c}],
+                    encode([a, b, c])
+                ),
+                ?_assertEqual(
+                    [{1, a}],
+                    encode([a])
+                ),
+                ?_assertEqual(
+                    [{3, a}],
+                    encode([a, a, a])
+                )
+            ]
+        },
+        {
+            "it should return an empty list when you pass an empty list",
+            ?_assertEqual(
+                [],
+                encode([])
+            )
         }
     ].

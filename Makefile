@@ -25,5 +25,6 @@ test: compile
 		-run lesson2_task04_tests test \
 		-run lesson2_task05_tests test \
 		-run lesson2_task06_tests test \
+		-run lesson2_task14_tests test \
 		-run lesson2_taskXXX_tests test \
 		-run init stop

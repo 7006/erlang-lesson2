@@ -3,7 +3,9 @@ all: fmt test
 
 .PHONY: fmt
 fmt:
-	erlfmt --verbose -w *.erl
+	erlfmt \
+		-w *.erl \
+		# --verbose
 
 .PHONY: clean
 clean:

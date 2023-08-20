@@ -24,6 +24,9 @@ duplicate_test_() ->
         },
         {
             "it should return an empty list when you pass an empty list",
-            ?_assertEqual([], duplicate([]))
+            ?_assertEqual(
+                [],
+                duplicate([])
+            )
         }
     ].

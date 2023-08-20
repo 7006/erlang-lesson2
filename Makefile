@@ -16,7 +16,6 @@ compile: clean
 .PHONY: test
 test: compile
 	erl \
-		-env EUNIT verbose \
 		-noshell \
 		-run lesson2_task01_tests test \
 		-run lesson2_task02_tests test \
@@ -28,4 +27,5 @@ test: compile
 		-run lesson2_task14_tests test \
 		-run lesson2_task15_tests test \
 		-run lesson2_taskXXX_tests test \
-		-run init stop
+		-run init stop \
+		# -env EUNIT verbose

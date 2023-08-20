@@ -12,7 +12,7 @@ replicate(List, Count) when
 
 replicate([], Count, Acc, Count) ->
     reverse(Acc);
-replicate([H | T], Count, Acc, 0) ->
+replicate([_ | T], Count, Acc, 0) ->
     replicate(T, Count, Acc, Count);
 replicate([H | T], Count, Acc, Current) ->
     replicate([H | T], Count, [H | Acc], Current - 1).

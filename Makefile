@@ -1,5 +1,3 @@
-export EUNIT=verbose
-
 .PHONY: all
 all: fmt test
 
@@ -18,6 +16,7 @@ compile: clean
 .PHONY: test
 test: compile
 	erl \
+		-env EUNIT verbose \
 		-noshell \
 		-run lesson2_task01_tests test \
 		-run lesson2_task02_tests test \

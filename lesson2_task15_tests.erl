@@ -6,7 +6,7 @@
 replicate_test_() ->
     [
         {
-            "it should replicate consequential elements N times for a non-empty list",
+            "it should replicate consequential elements 'Count' times for a non-empty list",
             [
                 ?_assertEqual(
                     [a, a, a, a, b, b, b, b, c, c, c, c],
@@ -23,14 +23,14 @@ replicate_test_() ->
             ]
         },
         {
-            "it should return the same non-empty list when N equals to 1",
+            "it should return the same list for a one-element list when Count equals to 1",
             [
                 ?_assertEqual([a, b, c, d], replicate([a, b, c, d], 1)),
                 ?_assertEqual([a], replicate([a], 1))
             ]
         },
         {
-            "it should return an empty list when you pass an empty list for any value of N",
+            "it should return an empty list when you pass an empty list for any value of Count",
             [
                 ?_assertEqual([], replicate([], 1)),
                 ?_assertEqual([], replicate([], 2)),

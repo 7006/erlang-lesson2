@@ -6,19 +6,19 @@
 last_test_() ->
     [
         {
-            "it should return atom 'undefined' for an empty list",
+            "it should return 'undefined' for an empty list",
             ?_assertEqual(undefined, last([]))
         },
         {
-            "it should return last element for the one-element list",
+            "it should find a last element for the one-element list",
             ?_assertEqual(a, last([a]))
         },
         {
-            "it should return last element for the two-element list",
+            "it should find a last element for the two-element list",
             ?_assertEqual(b, last([a, b]))
         },
         {
-            "it should return last element for a non empty list",
+            "it should find a last element for a non-empty list",
             ?_assertEqual(f, last([a, b, c, d, e, f]))
         }
     ].

@@ -5,13 +5,13 @@
 
 % Закодувати список за допомогою модифікованого алгоритму RLE
 encode_modified(List) when is_list(List) ->
-    encode_modified(List, 0, []).
+    encode_modified(List, []).
 
-encode_modified([], 0, Acc) ->
+encode_modified([], Acc) ->
     reverse(Acc);
-encode_modified([H, H | T], Count, Acc) ->
-    encode_modified([H | T], Count + 1, Acc);
-encode_modified([H | T], 0, Acc) ->
-    encode_modified(T, 0, [H | Acc]);
-encode_modified([H | T], Count, Acc) ->
-    encode_modified(T, 0, [{Count + 1, H} | Acc]).
+encode_modified([H | T], [{Count, H} | R]) ->
+    encode_modified(T, [{Count + 1, H} | R]);
+encode_modified([H, H | T], Acc) ->
+    encode_modified([H | T], [{1, H} | Acc]);
+encode_modified([H | T], Acc) ->
+    encode_modified(T, [H | Acc]).

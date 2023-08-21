@@ -5,7 +5,7 @@ all: fmt test
 fmt:
 	erlfmt \
 		-w *.erl \
-		--verbose
+		# --verbose
 
 .PHONY: clean
 clean:
@@ -35,4 +35,4 @@ test: compile
 		-run lesson2_task14_tests test \
 		-run lesson2_task15_tests test \
 		-run init stop \
-		-env EUNIT verbose
+		# -env EUNIT verbose

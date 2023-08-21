@@ -6,7 +6,7 @@
 replicate_test_() ->
     [
         {
-            "it should replicate each element 'Count' times for a non-empty list",
+            "it should replicate each element 'N' times for a non-empty list",
             [
                 ?_assertEqual(
                     [a, a, a, a, b, b, b, b, c, c, c, c],

@@ -4,15 +4,15 @@
 -import(lesson2_task05, [reverse/1]).
 
 % Написати функцію-реплікатор всіх елементів вхідного списку
-replicate(List, Count) when
+replicate(List, N) when
     is_list(List),
-    is_integer(Count) andalso Count > 0
+    is_integer(N) andalso N > 0
 ->
-    replicate(List, Count, [], Count).
+    replicate(List, [], N, 0).
 
-replicate([], Count, Acc, Count) ->
+replicate([], Acc, _, _) ->
     reverse(Acc);
-replicate([_ | T], Count, Acc, 0) ->
-    replicate(T, Count, Acc, Count);
-replicate([H | T], Count, Acc, Current) ->
-    replicate([H | T], Count, [H | Acc], Current - 1).
+replicate([_ | T], Acc, N, N) ->
+    replicate(T, Acc, N, 0);
+replicate([H | T], Acc, N, I) ->
+    replicate([H | T], [H | Acc], N, I + 1).

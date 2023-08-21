@@ -26,6 +26,7 @@ test: compile
 		-run lesson2_task05_tests test \
 		-run lesson2_task06_tests test \
 		-run lesson2_task08_tests test \
+		-run lesson2_task07_tests test \
 		-run lesson2_task09_tests test \
 		-run lesson2_task10_tests test \
 		-run lesson2_task11_tests test \
@@ -33,6 +34,5 @@ test: compile
 		-run lesson2_task13_tests test \
 		-run lesson2_task14_tests test \
 		-run lesson2_task15_tests test \
-		-run lesson2_taskXXX_tests test \
 		-run init stop \
 		# -env EUNIT verbose

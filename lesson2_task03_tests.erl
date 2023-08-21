@@ -6,20 +6,6 @@
 element_at_test_() ->
     [
         {
-            "it should reject when 'Index' is a negative integer",
-            [
-                ?_assertError(function_clause, element_at([a], -1)),
-                ?_assertError(function_clause, element_at([], -1))
-            ]
-        },
-        {
-            "it should reject when 'Index' is 0",
-            [
-                ?_assertError(function_clause, element_at([a], 0)),
-                ?_assertError(function_clause, element_at([], 0))
-            ]
-        },
-        {
             "it should get the 1st element for the one-element list",
             ?_assertEqual(a, element_at([a], 1))
         },

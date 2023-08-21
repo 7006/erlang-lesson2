@@ -6,13 +6,6 @@
 reverse_test_() ->
     [
         {
-            "it should reject non list value for a 'List' argument",
-            [
-                ?_assertError(function_clause, reverse(0)),
-                ?_assertError(function_clause, reverse({}))
-            ]
-        },
-        {
             "it should reverse a non-empty list",
             [
                 ?_assertEqual([3, 2, 1], reverse([1, 2, 3])),

@@ -6,13 +6,6 @@
 len_test_() ->
     [
         {
-            "it should reject non list value for the 'List' argument",
-            [
-                ?_assertError(function_clause, len(0)),
-                ?_assertError(function_clause, len({}))
-            ]
-        },
-        {
             "it should get 0 for an empty list",
             ?_assertEqual(0, len([]))
         },

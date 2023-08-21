@@ -6,7 +6,31 @@
 flatten_test_() ->
     [
         {
-            "it should return atom 'ok'",
-            ?_assertEqual(ok, flatten([]))
+            "it should flatten an non-empty list",
+            [
+                ?_assertEqual(
+                    [a, b, c, d, e],
+                    flatten([a, [], [b, [c, d], e]])
+                ),
+                ?_assertEqual(
+                    [a, b, c],
+                    flatten([a, b, c])
+                ),
+                ?_assertEqual(
+                    [a, b, c],
+                    flatten([a, [b, [c]]])
+                ),
+                ?_assertEqual(
+                    [a],
+                    flatten([[[a]]])
+                )
+            ]
+        },
+        {
+            "it should flaten an empty list as empty list",
+            ?_assertEqual(
+                [],
+                flatten([])
+            )
         }
     ].

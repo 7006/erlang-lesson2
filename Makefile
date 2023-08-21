@@ -25,8 +25,8 @@ test: compile
 		-run lesson2_task04_tests test \
 		-run lesson2_task05_tests test \
 		-run lesson2_task06_tests test \
-		-run lesson2_task08_tests test \
 		-run lesson2_task07_tests test \
+		-run lesson2_task08_tests test \
 		-run lesson2_task09_tests test \
 		-run lesson2_task10_tests test \
 		-run lesson2_task11_tests test \

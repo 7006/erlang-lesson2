@@ -5,11 +5,11 @@
 
 % Закодувати список за допомогою алгоритму RLE
 encode(List) when is_list(List) ->
-    encode(List, 0, []).
+    encode(List, []).
 
-encode([], 0, Acc) ->
+encode([], Acc) ->
     reverse(Acc);
-encode([H, H | T], Count, Acc) ->
-    encode([H | T], Count + 1, Acc);
-encode([H | T], Count, Acc) ->
-    encode(T, 0, [{Count + 1, H} | Acc]).
+encode([H | T], [{Count, H} | R]) ->
+    encode(T, [{Count + 1, H} | R]);
+encode([H | T], Acc) ->
+    encode(T, [{1, H} | Acc]).

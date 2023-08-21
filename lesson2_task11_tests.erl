@@ -27,7 +27,7 @@ encode_modified_test_() ->
             ]
         },
         {
-            "it should encode an empty list as empty list",
+            "it should encode an empty list as an empty list",
             ?_assertEqual(
                 [],
                 encode_modified([])

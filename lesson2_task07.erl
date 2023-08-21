@@ -19,7 +19,7 @@ flatten(X, Acc) ->
 %
 % function calls step by step
 %
-% example1
+% example 1
 %
 % flatten([[[[a]]]], [])
 % flatten([[[a]]], flatten([], []))

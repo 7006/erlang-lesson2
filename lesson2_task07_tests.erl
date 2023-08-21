@@ -6,7 +6,7 @@
 flatten_test_() ->
     [
         {
-            "it should flatten an non-empty list",
+            "it should flatten a non-empty list",
             [
                 ?_assertEqual(
                     [a, b, c, d, e],

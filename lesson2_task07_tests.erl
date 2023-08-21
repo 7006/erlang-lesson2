@@ -22,7 +22,11 @@ flatten_test_() ->
                 ),
                 ?_assertEqual(
                     [a],
-                    flatten([[[a]]])
+                    flatten([[[[a]]]])
+                ),
+                ?_assertEqual(
+                    [a, b, c, d],
+                    flatten([a, [b, c], [], d])
                 )
             ]
         },

@@ -2,15 +2,15 @@
 -export([element_at/2]).
 
 % Знайти N-й елемент списку
-element_at(List, Index) when
+element_at(List, N) when
     is_list(List),
-    is_integer(Index) andalso Index > 0
+    is_integer(N) andalso N >= 1
 ->
-    element_at_(List, Index).
+    element_at(List, N, 1).
 
-element_at_([], _) ->
+element_at([], _, _) ->
     undefined;
-element_at_([H | _], 1) ->
+element_at([H | _], N, N) ->
     H;
-element_at_([_ | T], Index) ->
-    element_at_(T, Index - 1).
+element_at([_ | T], N, I) ->
+    element_at(T, N, I + 1).

@@ -6,7 +6,31 @@
 decode_modified_test_() ->
     [
         {
-            "it should return atom 'ok'",
-            ?_assertEqual(ok, decode_modified([]))
+            "it should decode a non-empty list encoded by the modified RLE algo",
+            [
+                ?_assertEqual(
+                    [a, a, a, a, b, c, c, a, a, d, e, e, e, e],
+                    decode_modified([{4, a}, b, {2, c}, {2, a}, d, {4, e}])
+                ),
+                ?_assertEqual(
+                    [a, b, c],
+                    decode_modified([a, b, c])
+                ),
+                ?_assertEqual(
+                    [a],
+                    decode_modified([a])
+                ),
+                ?_assertEqual(
+                    [a, a, a],
+                    decode_modified([{3, a}])
+                )
+            ]
+        },
+        {
+            "it should return an empty list when you pass an empty list",
+            ?_assertEqual(
+                [],
+                decode_modified([])
+            )
         }
     ].

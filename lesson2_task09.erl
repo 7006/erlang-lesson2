@@ -5,11 +5,11 @@
 
 % Запакувати послідовні дублікати у вкладені списки
 pack(List) when is_list(List) ->
-    pack(List, [], []).
+    pack(List, []).
 
-pack([], [], Acc) ->
+pack([], Acc) ->
     reverse(Acc);
-pack([H, H | T], Dup, Acc) ->
-    pack([H | T], [H | Dup], Acc);
-pack([H | T], Dup, Acc) ->
-    pack(T, [], [[H | Dup] | Acc]).
+pack([H | T1], [[H | T2] | R]) ->
+    pack(T1, [[H, H | T2] | R]);
+pack([H | T], Acc) ->
+    pack(T, [[H] | Acc]).

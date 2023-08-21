@@ -15,38 +15,3 @@ flatten([], Acc) ->
     Acc;
 flatten(X, Acc) ->
     [X | Acc].
-
-%
-% function calls step by step
-%
-% example 1
-%
-% flatten([[[[a]]]], [])
-% flatten([[[a]]], flatten([], []))
-% flatten([[[a]]], [])
-% flatten([[a]], flatten([], []))
-% flatten([[a]], [])
-% flatten([a], flatten([], []))
-% flatten([a], [])
-% flatten(a, flatten([], []))
-% flatten(a, [])
-% [a]
-%
-% example 2
-%
-% flatten([a, [b, c], [], d], [])
-% flatten(a, flatten([[b, c], [], d], []))
-% flatten(a, flatten([b, c], flatten([[], d], [])))
-% flatten(a, flatten([b, c], flatten([], flatten([d], []))))
-% flatten(a, flatten([b, c], flatten([], flatten(d, flatten([], [])))))
-% flatten(a, flatten([b, c], flatten([], flatten(d, []))))
-% flatten(a, flatten([b, c], flatten([], [d])))
-% flatten(a, flatten([b, c], [d]))
-% flatten(a, flatten([b, c], [d]))
-% flatten(a, flatten(b, flatten([c], [d])))
-% flatten(a, flatten(b, flatten(c, flatten([], [d]))))
-% flatten(a, flatten(b, flatten(c, [d])))
-% flatten(a, flatten(b, [c, d]))
-% flatten(a, [b, c, d])
-% [a, b, c, d]
-%

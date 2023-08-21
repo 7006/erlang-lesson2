@@ -6,7 +6,7 @@
 compress_test_() ->
     [
         {
-            "it should remove consequential duplicate elements from a non-empty list",
+            "it should remove consecutive duplicate elements from a non-empty list",
             [
                 ?_assertEqual(
                     [a, b, c, a, d, e],
@@ -27,7 +27,7 @@ compress_test_() ->
             ]
         },
         {
-            "it should return the same list for a non-empty list with unique elements",
+            "it should not modify a non-empty list without duplicates",
             [
                 ?_assertEqual(
                     [a, b, c, d],
@@ -44,7 +44,7 @@ compress_test_() ->
             ]
         },
         {
-            "it should return an empty list when you pass an empty list",
+            "it should compress an empty list as an empty list",
             ?_assertEqual([], compress([]))
         }
     ].

@@ -6,7 +6,7 @@
 encode_test_() ->
     [
         {
-            "it should encode non-empty list",
+            "it should encode a non-empty list by RLE algo",
             [
                 ?_assertEqual(
                     [{4, a}, {1, b}, {2, c}, {2, a}, {1, d}, {4, e}],
@@ -27,7 +27,7 @@ encode_test_() ->
             ]
         },
         {
-            "it should return an empty list when you pass an empty list",
+            "it should encode an empty list as empty list",
             ?_assertEqual(
                 [],
                 encode([])

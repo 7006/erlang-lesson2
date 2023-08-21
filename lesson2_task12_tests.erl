@@ -27,7 +27,7 @@ decode_modified_test_() ->
             ]
         },
         {
-            "it should return an empty list when you pass an empty list",
+            "it should decode an empty list as empty list",
             ?_assertEqual(
                 [],
                 decode_modified([])

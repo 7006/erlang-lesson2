@@ -6,7 +6,7 @@
 encode_modified_test_() ->
     [
         {
-            "it should encode_modified non-empty list",
+            "it should encode a non-empty list by modified RLE algo",
             [
                 ?_assertEqual(
                     [{4, a}, b, {2, c}, {2, a}, d, {4, e}],
@@ -27,7 +27,7 @@ encode_modified_test_() ->
             ]
         },
         {
-            "it should return an empty list when you pass an empty list",
+            "it should encode an empty list as empty list",
             ?_assertEqual(
                 [],
                 encode_modified([])

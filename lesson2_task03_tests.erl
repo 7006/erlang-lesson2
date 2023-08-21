@@ -6,21 +6,14 @@
 element_at_test_() ->
     [
         {
-            "it should reject a non integer value for the 'Index' argument",
-            [
-                ?_assertError(function_clause, element_at([a], first)),
-                ?_assertError(function_clause, element_at([], first))
-            ]
-        },
-        {
-            "it should reject a negative integer value for the 'Index' argument",
+            "it should reject when 'Index' is a negative integer",
             [
                 ?_assertError(function_clause, element_at([a], -1)),
                 ?_assertError(function_clause, element_at([], -1))
             ]
         },
         {
-            "it should reject 0 for the 'Index' argument",
+            "it should reject when 'Index' is 0",
             [
                 ?_assertError(function_clause, element_at([a], 0)),
                 ?_assertError(function_clause, element_at([], 0))

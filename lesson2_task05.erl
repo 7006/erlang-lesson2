@@ -5,7 +5,7 @@
 reverse(List) when is_list(List) ->
     reverse(List, []).
 
-reverse([], Reversed) ->
-    Reversed;
-reverse([H | T], Reversed) ->
-    reverse(T, [H | Reversed]).
+reverse([], Acc) ->
+    Acc;
+reverse([H | T], Acc) ->
+    reverse(T, [H | Acc]).

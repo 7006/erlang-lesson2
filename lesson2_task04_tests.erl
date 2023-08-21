@@ -13,11 +13,11 @@ len_test_() ->
             ]
         },
         {
-            "it should return 0 for an empty list",
+            "it should get 0 for an empty list",
             ?_assertEqual(0, len([]))
         },
         {
-            "it should return the length of a non empty list",
+            "it should get the length of a non-empty list",
             [
                 ?_assertEqual(4, len([a, b, c, d])),
                 ?_assertEqual(2, len([a, b])),

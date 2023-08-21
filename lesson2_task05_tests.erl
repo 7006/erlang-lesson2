@@ -13,7 +13,7 @@ reverse_test_() ->
             ]
         },
         {
-            "it should reverse a non empty list",
+            "it should reverse a non-empty list",
             [
                 ?_assertEqual([3, 2, 1], reverse([1, 2, 3])),
                 ?_assertEqual([2, 1], reverse([1, 2])),
@@ -21,7 +21,7 @@ reverse_test_() ->
             ]
         },
         {
-            "it should return an empty list after reversing an empty list",
+            "it should reverse an empty list as an empty list",
             ?_assertEqual([], reverse([]))
         }
     ].

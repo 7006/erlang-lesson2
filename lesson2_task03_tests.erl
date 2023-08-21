@@ -27,7 +27,7 @@ element_at_test_() ->
             ]
         },
         {
-            "it should return the 1st element for the one-element list",
+            "it should get the 1st element for the one-element list",
             ?_assertEqual(a, element_at([a], 1))
         },
         {
@@ -40,14 +40,14 @@ element_at_test_() ->
             ]
         },
         {
-            "it should return 'undefined' when the element is not found at the given index",
+            "it should get 'undefined' when the element is not found at the given index",
             [
                 ?_assertEqual(undefined, element_at([a, b, c, d, e, f], 10)),
                 ?_assertEqual(undefined, element_at([a, b, c, d, e, f], 7))
             ]
         },
         {
-            "it should return 'undefined' for an empty list",
+            "it should get 'undefined' for an empty list",
             [
                 ?_assertEqual(undefined, element_at([], 1)),
                 ?_assertEqual(undefined, element_at([], 2)),

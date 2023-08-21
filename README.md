@@ -5,4 +5,6 @@ Run eunit tests on your machine
 make test
 ```
 
-or you may run tests and poke around with the source code in the browser using [online IDE](https://replit.com/@70061/erlang-lesson2)
+Alternatively, you may use [Replit: the collaborative browser based IDE](https://replit.com/@70061/erlang-lesson2)
+
+where you may run eunit tests, poke around the source code, etc

@@ -31,10 +31,24 @@ flatten_test_() ->
             ]
         },
         {
-            "it should flaten an empty list as empty list",
+            "it should flaten an empty list to the empty list",
             ?_assertEqual(
                 [],
                 flatten([])
+            )
+        },
+        {
+            "it should flaten a deeply nested empty list to the empty list",
+            ?_assertEqual(
+                [],
+                flatten([[[[]]]])
+            )
+        },
+        {
+            "it should flaten a list of deeply nested empty lists to the empty list",
+            ?_assertEqual(
+                [],
+                flatten([[], [[]], [[[]]], [[[[]]]]])
             )
         }
     ].

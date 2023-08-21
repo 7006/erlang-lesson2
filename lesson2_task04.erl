@@ -8,4 +8,4 @@ len(List) when is_list(List) ->
 len([], Acc) ->
     Acc;
 len([_ | T], Acc) ->
-    len(T, 1 + Acc).
+    len(T, Acc + 1).

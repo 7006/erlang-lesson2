@@ -4,9 +4,7 @@
 -import(lesson2_task05, [reverse/1]).
 
 % Написати функцію-реплікатор всіх елементів вхідного списку
-replicate(List, N) when
-    is_integer(N) andalso N > 0
-->
+replicate(List, N) when N > 0 ->
     replicate(List, [], N, 0).
 
 replicate([], Acc, _, _) ->

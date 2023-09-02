@@ -2,7 +2,7 @@
 -export([element_at/2]).
 
 % Знайти N-й елемент списку
-element_at(List, N) when N >= 1 ->
+element_at(List, N) when N > 0 ->
     element_at(List, N, 1).
 
 element_at([], _, _) ->

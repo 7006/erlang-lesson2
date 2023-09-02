@@ -4,7 +4,7 @@
 -import(lesson2_task05, [reverse/1]).
 
 % Визначити, чи є список паліндромом
-is_palindrome(List) when is_list(List) ->
+is_palindrome(List) ->
     is_palindrome(List, reverse(List)).
 
 is_palindrome([], []) ->

@@ -4,7 +4,7 @@
 -import(lesson2_task05, [reverse/1]).
 
 % Написати декодер для стандартного алгоритму RLE
-decode(List) when is_list(List) ->
+decode(List) ->
     decode(List, []).
 
 decode([], Acc) ->

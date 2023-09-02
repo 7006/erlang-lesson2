@@ -2,7 +2,7 @@
 -export([reverse/1]).
 
 % Перевернути список
-reverse(List) when is_list(List) ->
+reverse(List) ->
     reverse(List, []).
 
 reverse([], Acc) ->

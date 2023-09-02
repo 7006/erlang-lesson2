@@ -4,7 +4,7 @@
 -import(lesson2_task05, [reverse/1]).
 
 % Написати дублікатор усіх елементів списку
-duplicate(List) when is_list(List) ->
+duplicate(List) ->
     duplicate(List, []).
 
 duplicate([], Acc) ->

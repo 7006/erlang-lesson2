@@ -6,7 +6,7 @@
 -include_lib("eunit/include/eunit.hrl").
 
 % Вирівняти структуру із вкладеними списками
-flatten(List) when is_list(List) ->
+flatten(List) ->
     flatten(List, []).
 
 flatten([H | T], Acc) ->

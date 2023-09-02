@@ -4,7 +4,7 @@
 -import(lesson2_task05, [reverse/1]).
 
 % Видалити послідовні дублікати
-compress(List) when is_list(List) ->
+compress(List) ->
     compress(List, []).
 
 compress([], Acc) ->

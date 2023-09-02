@@ -3,7 +3,6 @@
 
 % Знайти N-й елемент списку
 element_at(List, N) when
-    is_list(List),
     is_integer(N) andalso N >= 1
 ->
     element_at(List, N, 1).

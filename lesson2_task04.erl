@@ -2,7 +2,7 @@
 -export([len/1]).
 
 % Порахувати кількість елементів списку
-len(List) when is_list(List) ->
+len(List) ->
     len(List, 0).
 
 len([], Acc) ->

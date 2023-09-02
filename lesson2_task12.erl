@@ -4,7 +4,7 @@
 -import(lesson2_task05, [reverse/1]).
 
 % Написати декодер для модифікованого алгоритму RLE
-decode_modified(List) when is_list(List) ->
+decode_modified(List) ->
     decode_modified(List, []).
 
 decode_modified([], Acc) ->

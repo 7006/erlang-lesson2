@@ -4,7 +4,7 @@
 -import(lesson2_task05, [reverse/1]).
 
 % Закодувати список за допомогою алгоритму RLE
-encode(List) when is_list(List) ->
+encode(List) ->
     encode(List, []).
 
 encode([], Acc) ->

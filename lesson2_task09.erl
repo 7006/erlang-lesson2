@@ -4,7 +4,7 @@
 -import(lesson2_task05, [reverse/1]).
 
 % Запакувати послідовні дублікати у вкладені списки
-pack(List) when is_list(List) ->
+pack(List) ->
     pack(List, []).
 
 pack([], Acc) ->

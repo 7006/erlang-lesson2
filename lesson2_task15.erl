@@ -5,7 +5,6 @@
 
 % Написати функцію-реплікатор всіх елементів вхідного списку
 replicate(List, N) when
-    is_list(List),
     is_integer(N) andalso N > 0
 ->
     replicate(List, [], N, 0).
